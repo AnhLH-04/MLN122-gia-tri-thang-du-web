@@ -2,6 +2,9 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Coins, TrendingUp, DollarSign, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import Section1_1Image from '../assets/Section1_1.png';
+import Section1_2Image from '../assets/Section1_2.png';
+import Section1_6Image from '../assets/Section1_6.png';
 
 export function Section1() {
   const ref = useRef(null);
@@ -85,7 +88,7 @@ export function Section1() {
           >
             <div className="bg-[#D4AF37]/10 border-2 border-[#D4AF37] rounded-lg p-6">
               <h3 className="text-[#D4AF37] mb-6">🔄 Công thức vận động</h3>
-              
+
               <div className="space-y-6">
                 <div className="bg-black/40 rounded-lg p-4">
                   <p className="text-white/60 text-sm mb-2">Trao đổi đơn giản:</p>
@@ -129,13 +132,14 @@ export function Section1() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-12 grid md:grid-cols-2 gap-6"
+          className="mt-12 grid md:grid-cols-3 gap-6"
         >
           <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50 group">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1608521705033-9953484663b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb25leSUyMGNhc2glMjBzdGFja3xlbnwxfHx8fDE3NjEwMjgwMTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              // src="https://images.unsplash.com/photo-1608521705033-9953484663b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb25leSUyMGNhc2glMjBzdGFja3xlbnwxfHx8fDE3NjEwMjgwMTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={Section1_1Image}
               alt="Money accumulation"
-              className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-auto h-auto object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
               <p className="text-white text-sm">Tích lũy tiền tệ - Bước đầu tiên của tư bản</p>
@@ -144,9 +148,22 @@ export function Section1() {
 
           <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50 group">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1568585105565-e372998a195d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzc21hbiUyMG1vbmV5JTIwd2VhbHRofGVufDF8fHx8MTc2MTAyODAxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              // src="https://images.unsplash.com/photo-1608521705033-9953484663b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb25leSUyMGNhc2glMjBzdGFja3xlbnwxfHx8fDE3NjEwMjgwMTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={Section1_6Image}
+              alt="Money accumulation"
+              className="w-auto h-auto object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+              <p className="text-white text-sm">Tư bản - Tiền được nhân lên từ mồ hôi của người lao động.</p>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50 group">
+            <ImageWithFallback
+              // src="https://images.unsplash.com/photo-1568585105565-e372998a195d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzc21hbiUyMG1vbmV5JTIwd2VhbHRofGVufDF8fHx8MTc2MTAyODAxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={Section1_2Image}
               alt="Capitalist wealth"
-              className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-auto h-auto object-contain group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
               <p className="text-white text-sm">Nhà tư bản - Người sở hữu tư liệu sản xuất</p>

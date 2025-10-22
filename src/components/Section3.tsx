@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Factory, Zap, TrendingUp, Clock, Gauge } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import Section3Image from '../assets/Section3.png';
 
 export function Section3() {
   const ref = useRef(null);
@@ -55,7 +56,7 @@ export function Section3() {
           <Zap size={50} className="text-[#D4AF37] mx-auto mb-4" />
           <h3 className="text-2xl text-[#D4AF37] mb-4">Giá trị thặng dư (m)</h3>
           <p className="text-white/90 text-lg mb-2">
-            Phần giá trị <span className="text-red-400">dôi ra ngoài giá trị sức lao động</span> do công nhân tạo ra 
+            Phần giá trị <span className="text-red-400">dôi ra ngoài giá trị sức lao động</span> do công nhân tạo ra
             nhưng bị nhà tư bản chiếm đoạt
           </p>
           <p className="text-[#D4AF37]">
@@ -149,13 +150,14 @@ export function Section3() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.1, duration: 0.8 }}
-          className="mt-12"
+          className="mt-12 max-w-4xl mx-auto"
         >
           <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1729843420196-1ff32bb39db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc3NlbWJseSUyMGxpbmUlMjBtYW51ZmFjdHVyaW5nfGVufDF8fHx8MTc2MTAyODAxOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              // src="https://images.unsplash.com/photo-1729843420196-1ff32bb39db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc3NlbWJseSUyMGxpbmUlMjBtYW51ZmFjdHVyaW5nfGVufDF8fHx8MTc2MTAyODAxOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={Section3Image}
               alt="Assembly line manufacturing"
-              className="w-full h-80 object-cover"
+              className="w-auto h-auto object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6">
               <div>

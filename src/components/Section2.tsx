@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { User, Key, Briefcase, Heart } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import Section2Image from '../assets/Section2.png';
 
 export function Section2() {
   const ref = useRef(null);
@@ -56,7 +57,7 @@ export function Section2() {
               <h3 className="text-[#D4AF37]">Sức lao động là gì?</h3>
             </div>
             <p className="text-white/80 mb-4">
-              Sức lao động là <span className="text-[#D4AF37]">toàn bộ năng lực thể chất và tinh thần</span> tồn tại 
+              Sức lao động là <span className="text-[#D4AF37]">toàn bộ năng lực thể chất và tinh thần</span> tồn tại
               trong con người, được vận dụng trong quá trình lao động.
             </p>
             <div className="bg-[#D4AF37]/10 rounded-lg p-4">
@@ -118,17 +119,17 @@ export function Section2() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mb-8"
+          className="mb-8 max-w-2xl mx-auto"
         >
-          <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50">
+          <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50 bg-black/40">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXIlMjBsYWJvcnxlbnwxfHx8fDE3NjEwMjgwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={Section2Image}
               alt="Worker labor"
-              className="w-full h-80 object-cover"
+              className="w-full h-72 object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex items-end p-4">
               <div>
-                <h4 className="text-[#D4AF37] mb-2">Người lao động - Hàng hóa sống</h4>
+                <h4 className="text-[#D4AF37] mb-2 font-semibold">Người lao động - Hàng hóa sống</h4>
                 <p className="text-white/90 text-sm">
                   Sức lao động của người công nhân trở thành hàng hóa được mua bán trên thị trường
                 </p>

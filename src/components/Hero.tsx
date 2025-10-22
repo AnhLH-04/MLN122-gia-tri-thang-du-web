@@ -60,7 +60,7 @@ export function Hero() {
             Bí mật của nền kinh tế tư bản chủ nghĩa
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Khám phá sự thật ẩn giấu đằng sau sự tích lũy của cải và bóc lột lao động 
+            Khám phá sự thật ẩn giấu đằng sau sự tích lũy của cải và bóc lột lao động
             trong hệ thống tư bản chủ nghĩa
           </p>
         </motion.div>
@@ -78,36 +78,6 @@ export function Hero() {
           >
             <TrendingDown size={24} />
           </motion.div>
-        </motion.div>
-
-        {/* Quick preview images */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
-        >
-          {[
-            { src: 'https://images.unsplash.com/photo-1653590501805-cce7dec267e0?w=400', label: 'Nguồn gốc' },
-            { src: 'https://images.unsplash.com/photo-1596513057932-4ac7206d3152?w=400', label: 'Sức lao động' },
-            { src: 'https://images.unsplash.com/photo-1663841365335-8acab127bf68?w=400', label: 'Khai thác' },
-            { src: 'https://images.unsplash.com/photo-1690883793939-f8cca2f28ee0?w=400', label: 'Hậu quả' }
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="relative overflow-hidden rounded-lg border border-[#D4AF37]/30 cursor-pointer group"
-            >
-              <img
-                src={item.src}
-                alt={item.label}
-                className="w-full h-32 object-cover opacity-70 group-hover:opacity-100 transition-opacity"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
-                <p className="text-white text-xs">{item.label}</p>
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
 

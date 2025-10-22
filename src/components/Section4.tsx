@@ -2,6 +2,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { TrendingUp, Building2, ShoppingCart, CreditCard, Home } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import Section4Image from '../assets/Section4.png';
 
 export function Section4() {
   const ref = useRef(null);
@@ -95,7 +96,7 @@ export function Section4() {
                 <h4 className="text-white">Lợi nhuận bình quân</h4>
               </div>
               <p className="text-white/70 text-sm">
-                Hình thành từ cạnh tranh giữa các ngành, làm cho các ngành có cơ cấu tư bản khác nhau 
+                Hình thành từ cạnh tranh giữa các ngành, làm cho các ngành có cơ cấu tư bản khác nhau
                 đều có tỷ suất lợi nhuận tương đương
               </p>
             </motion.div>
@@ -109,7 +110,7 @@ export function Section4() {
                 <h4 className="text-white">Lợi nhuận thương nghiệp</h4>
               </div>
               <p className="text-white/70 text-sm">
-                Phần giá trị thặng dư nhà tư bản công nghiệp "nhường" cho nhà buôn 
+                Phần giá trị thặng dư nhà tư bản công nghiệp "nhường" cho nhà buôn
                 để họ thực hiện chức năng lưu thông hàng hóa
               </p>
             </motion.div>
@@ -147,13 +148,14 @@ export function Section4() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1, duration: 0.8 }}
-          className="mt-12"
+          className="mt-12 max-w-2xl mx-auto"
         >
           <div className="relative overflow-hidden rounded-lg border-2 border-[#D4AF37]/50">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBjaGFydCUyMGdyYXBofGVufDF8fHx8MTc2MDkxNzQyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              // src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBjaGFydCUyMGdyYXBofGVufDF8fHx8MTc2MDkxNzQyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={Section4Image}
               alt="Financial charts"
-              className="w-full h-64 object-cover"
+              className="w-auto h-auto object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6">
               <div>
@@ -174,7 +176,7 @@ export function Section4() {
           className="mt-8 text-center"
         >
           <p className="text-white/60 italic">
-            "Giá trị thặng dư như một dòng sông, phân nhánh thành nhiều dòng chảy khác nhau, 
+            "Giá trị thặng dư như một dòng sông, phân nhánh thành nhiều dòng chảy khác nhau,
             nhưng nguồn gốc đều từ lao động của công nhân"
           </p>
         </motion.div>

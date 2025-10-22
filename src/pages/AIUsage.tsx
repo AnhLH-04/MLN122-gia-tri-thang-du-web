@@ -6,7 +6,7 @@ export function AIUsage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
             {/* Header */}
-            <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#D4AF37]/30">
+            <header className="top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#D4AF37]/30">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                     <Link to="/" className="flex items-center gap-2 text-white hover:text-[#D4AF37] transition-colors">
                         <span className="text-xl">← Quay lại</span>
