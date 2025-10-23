@@ -40,9 +40,9 @@ export function AIUsage() {
                             </p>
                             <div className="bg-black/40 rounded p-4 border-l-4 border-[#D4AF37]">
                                 <p className="text-white/70">
-                                    <strong className="text-[#D4AF37]">Công cụ sử dụng:</strong> GitHub Copilot, Claude AI<br />
+                                    <strong className="text-[#D4AF37]">Công cụ sử dụng:</strong> GitHub Copilot, Claude AI, AI Luma Dream Machine<br />
                                     <strong className="text-[#D4AF37]">Thời gian:</strong> Tháng 10/2025<br />
-                                    <strong className="text-[#D4AF37]">Mục đích:</strong> Hỗ trợ code React, animation, styling, tối ưu UX
+                                    <strong className="text-[#D4AF37]">Mục đích:</strong> Hỗ trợ code React, animation, styling, tối ưu UX, tạo hình ảnh, video
                                 </p>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ export function AIUsage() {
                                 4.1. Công cụ AI và mục đích sử dụng
                             </h3>
 
-                            <div className="grid md:grid-cols-3 gap-6">
+                            <div className="grid md:grid-cols-4 gap-6">
                                 <div className="bg-black/40 rounded-lg p-6 border border-[#D4AF37]/20">
                                     <h4 className="text-[#D4AF37] font-semibold mb-3">🤖 GitHub Copilot</h4>
                                     <ul className="space-y-2 text-white/70 text-sm">
@@ -86,6 +86,15 @@ export function AIUsage() {
                                         <li>• Tìm hình ảnh minh họa</li>
                                         <li>• Background cho sections</li>
                                         <li>• Free stock photos</li>
+                                    </ul>
+                                </div>
+
+                                <div className="bg-black/40 rounded-lg p-6 border border-[#D4AF37]/20">
+                                    <h4 className="text-[#D4AF37] font-semibold mb-3">🎨 Luma Dream Machine</h4>
+                                    <ul className="space-y-2 text-white/70 text-sm">
+                                        <li>• Sinh hình / video / scenes</li>
+                                        <li>• Dùng reference image hoặc short video để điều hướng phong cách</li>
+                                        <li>• AR demo clips</li>
                                     </ul>
                                 </div>
                             </div>
@@ -165,36 +174,56 @@ export function AIUsage() {
                                     </div>
                                 </div>
 
-                                {/* Example 3 */}
-                                {/* <div className="bg-black/40 rounded-lg p-6 border-l-4 border-[#D4AF37]">
-                                    <h4 className="text-[#D4AF37] font-semibold mb-3">📌 Ví dụ 3: Animation icons xoay vòng</h4>
+                                {/* Example 3 - Luma Dream Machine */}
+                                <div className="bg-black/40 rounded-lg p-6 border-l-4 border-[#D4AF37]">
+                                    <h4 className="text-[#D4AF37] font-semibold mb-3">📌 Ví dụ 3: Tạo video minh họa với Luma Dream Machine</h4>
                                     <div className="space-y-3">
                                         <div className="bg-gray-800/50 rounded p-4">
                                             <p className="text-white/60 text-xs mb-1">PROMPT:</p>
                                             <p className="text-white/90 text-sm italic">
-                                                "Tạo animation 8 icons xoay vòng tròn bằng Framer Motion,
-                                                mỗi icon xuất hiện lần lượt với delay"
+                                                "Cinematic shot of factory workers on assembly line, warm golden lighting,
+                                                black and gold color palette, industrial atmosphere, depth of field,
+                                                high detail, realistic motion, 16:9 aspect ratio"
+                                            </p>
+                                        </div>
+                                        <div className="bg-gray-800/50 rounded p-4">
+                                            <p className="text-white/60 text-xs mb-1">INPUT:</p>
+                                            <p className="text-white/70 text-sm">
+                                                • Reference image: Ảnh nhà máy công nghiệp với ánh sáng vàng<br />
+                                                • Duration: 5 giây<br />
+                                                • Style: Cinematic, realistic
                                             </p>
                                         </div>
                                         <div className="bg-gray-800/50 rounded p-4">
                                             <p className="text-green-400 text-xs mb-1">KẾT QUẢ AI:</p>
                                             <p className="text-white/70 text-sm">
-                                                ✓ Code logic tính toán góc (360/8)<br />
-                                                ✓ Motion animation với initial/animate props<br />
-                                                ✓ Loop qua array để render icons
+                                                ✓ Video clip 5 giây với chuyển động mượt mà<br />
+                                                ✓ Màu sắc đen-vàng phù hợp theme website<br />
+                                                ✓ Chất lượng HD, cinematic look<br />
+                                                ✓ Exported as MP4 file (Section4Video.mp4)
                                             </p>
                                         </div>
                                         <div className="bg-red-900/20 rounded p-4 border border-red-500/30">
                                             <p className="text-red-400 text-xs mb-1">CHỈNH SỬA CỦA SINH VIÊN:</p>
                                             <p className="text-white/70 text-sm">
-                                                → Fix bug icons bị crop ngoài container (bỏ overflow-hidden)<br />
-                                                → Thêm background image phía sau icons<br />
-                                                → Điều chỉnh z-index để icons hiện rõ
+                                                → Crop video để loại bỏ phần đầu/cuối không cần thiết<br />
+                                                → Color grading bằng DaVinci Resolve để tăng độ tương phản<br />
+                                                → Thêm subtle vignette effect cho cinematic hơn<br />
+                                                → Compress file size để tối ưu loading time trên web<br />
+                                                → Import vào Section4.tsx với HTML5 video element
+                                            </p>
+                                        </div>
+                                        <div className="bg-blue-900/20 rounded p-4 border border-blue-500/30 mt-3">
+                                            <p className="text-blue-400 text-xs mb-1">📍 SỬ DỤNG TRONG DỰ ÁN:</p>
+                                            <p className="text-white/70 text-sm">
+                                                Video được sử dụng trong <strong>Section 4</strong> để minh họa cho phần
+                                                "Sự lan tỏa của bí mật - Các hình thức biểu hiện của tư bản".
+                                                Video tạo cảm giác sống động, giúp người xem hiểu rõ hơn về môi trường
+                                                công nghiệp và quá trình sản xuất giá trị thặng dư.
                                             </p>
                                         </div>
                                     </div>
-                                </div> */}
-
+                                </div>
                             </div>
                         </div>
                     </motion.section>
@@ -321,71 +350,6 @@ export function AIUsage() {
                             </div>
                         </div>
                     </motion.section>
-
-                    {/* Scoring Summary */}
-                    {/* <motion.section
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
-                        className="mb-12"
-                    >
-                        <div className="bg-gradient-to-r from-[#D4AF37]/20 to-red-900/20 border-2 border-[#D4AF37] rounded-lg p-8">
-                            <h3 className="text-2xl text-[#D4AF37] mb-6 flex items-center gap-3" style={{ fontFamily: 'Playfair Display, serif' }}>
-                                <FileText size={28} />
-                                Tổng kết chấm điểm (2 điểm)
-                            </h3>
-
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="bg-black/40 rounded-lg p-6 border-l-4 border-green-500">
-                                    <h4 className="text-green-400 font-semibold mb-3 flex items-center gap-2">
-                                        <CheckCircle2 size={20} />
-                                        0.5đ: Có phụ lục AI Usage minh bạch
-                                    </h4>
-                                    <p className="text-white/70 text-sm">
-                                        ✓ Trang báo cáo này<br />
-                                        ✓ Liệt kê công cụ, prompt, kết quả<br />
-                                        ✓ Ví dụ cụ thể có chỉnh sửa
-                                    </p>
-                                </div>
-
-                                <div className="bg-black/40 rounded-lg p-6 border-l-4 border-green-500">
-                                    <h4 className="text-green-400 font-semibold mb-3 flex items-center gap-2">
-                                        <CheckCircle2 size={20} />
-                                        0.5đ: Kiểm chứng thông tin bằng nguồn chính thống
-                                    </h4>
-                                    <p className="text-white/70 text-sm">
-                                        ✓ Đối chiếu giáo trình LLCT<br />
-                                        ✓ Định nghĩa chính xác<br />
-                                        ✓ Ví dụ phù hợp ngữ cảnh VN
-                                    </p>
-                                </div>
-
-                                <div className="bg-black/40 rounded-lg p-6 border-l-4 border-green-500">
-                                    <h4 className="text-green-400 font-semibold mb-3 flex items-center gap-2">
-                                        <CheckCircle2 size={20} />
-                                        0.5đ: Cam kết liêm chính học thuật
-                                    </h4>
-                                    <p className="text-white/70 text-sm">
-                                        ✓ Không để AI làm thay hoàn toàn<br />
-                                        ✓ Phân biệt rõ output AI vs chỉnh sửa<br />
-                                        ✓ Tự viết lại nội dung học thuật
-                                    </p>
-                                </div>
-
-                                <div className="bg-black/40 rounded-lg p-6 border-l-4 border-green-500">
-                                    <h4 className="text-green-400 font-semibold mb-3 flex items-center gap-2">
-                                        <CheckCircle2 size={20} />
-                                        0.5đ: Ứng dụng sáng tạo rõ ràng
-                                    </h4>
-                                    <p className="text-white/70 text-sm">
-                                        ✓ Website interactive với animation<br />
-                                        ✓ Ý tưởng layout và màu sắc riêng<br />
-                                        ✓ UX design được suy nghĩ kỹ
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.section> */}
 
                     {/* Footer */}
                     <motion.div
